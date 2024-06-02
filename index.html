@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- stylesheet added using font awesome -->
+    
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900">
+    <!-- animation css -->
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+    <style>
+         html {
+        scroll-behavior: smooth;
+        }
+        body {
+            font-family: poppins, sans-serif;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+        
+       
+        section {
+            padding: 104px 0px;
+        } 
+        .section {
+            padding: 52px 0px;
+        }
+
+        /* text sizes */
+        .text-5 {
+            font-size: 21px !important;
+        }
+
+        .text-8 {
+            font-size: 32px !important;
+            font-size: 2rem !important;
+        }
+
+        .text-5 {
+            font-size: 21px !important;
+            font-size: 1.3125rem !important;
+        }
+
+        .text-4 {
+            font-size: 18px !important;
+            font-size: 1.125rem !important;
+        }
+        .text-21 {
+            font-size: 6.5rem!important;
+            line-height: 1.3;
+        }
+        .text-25 {
+            font-size: 9rem;
+        }
+        .text-12{
+            line-height: 1.3;
+            font-size: 3rem !important;
+        }
+
+        .fw-300 {
+            font-weight: 300 !important;
+        }
+
+        .fw-200 {
+            font-weight: 200 !important;
+        }
+
+        .fw-500 {
+            font-weight: 500 !important;
+        }
+
+        .fw-600 {
+            font-weight: 600 !important;
+        }
+
+        .fw-400 {
+            font-weight: 400 !important;
+        }
+
+        .fw-700 {
+            font-weight: 700 !important;
+        }
+
+        /* =====NavBar part===== */
+        #main-nav ul li a.active{
+            color: #00fe9c !important;
+        }
+        #main-nav ul li a:hover{
+            color: #00fe9c !important;
+        }
+    
+        
+        /* =====home part===== */
+        #home {
+            background-color: #00fe9c;
+            background-size: cover;
+        }
+        #home a.btn-link{
+            text-decoration: underline;
+        }
+        #home a.btn-link:hover{
+            text-decoration: none;
+        }
+        .scroll-down-arrow {
+            color: #fff;
+            font-size: 20px;
+            height: 32px;
+            left: 50%;
+            line-height: 32px;
+            margin-left: -16px;
+            position: absolute;
+            text-align: center;
+            width: 32px;
+        }
+
+        /* =====About me part=== */
+        
+        #about a{
+            text-decoration: underline;
+        }
+        #about a:hover{
+            text-decoration: none;
+        }
+        .featured-box {
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .featured-box.style-4 {
+            text-align: center;
+        }
+
+        .featured-box.style-4 .featured-box-icon {
+            align-items: center;
+            box-shadow: 0 0 50px rgba(0, 0, 0, .03);
+            display: flex;
+            flex-shrink: 0;
+            height: 120px;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            text-align: center;
+            width: 120px;
+        }
+
+        .link-dark {
+            color: #212529 !important;
+        }
+
+        /* =====resume part ====== */
+        .border-2 {
+            border-left: 2px solid #00fe9c;
+        }
+        .border-3{
+            border-bottom: 3px solid #00fe9c !important;
+        }
+
+        .progress-sm {
+            height: 0.5rem !important;
+        }
+
+        /* ============portfolio part============ */
+
+        /* =====portfolio menu part====== */
+        #portfolio ul li.active{
+            background-color: #f8f9fa !important; 
+            color: #000 !important;
+            border-bottom: 3px solid #00fe9c !important;
+        }
+        #portfolio ul li:hover{
+            color:#000 !important;
+        }
+
+        .top-auto {
+            top: auto;
+        }
+
+        .card-hover-visible {
+            visibility: hidden;
+        }
+
+        .card:hover .card-hover-visible {
+            visibility: visible;
+        }
+
+        .portfolio-overlay {
+            background: rgba(0, 0, 0, .7);
+            bottom: 0;
+            display: flex !important;
+            left: 0;
+            opacity: 0;
+            position: absolute;
+            right: 0;
+            text-align: center;
+            top: 0;
+            transition: all .3s ease-in-out;
+        }
+
+        .portfolio-overlay-details {
+            margin-bottom: auto;
+            margin-top: auto;
+            width: 100%;
+        }
+
+        .portfolio-img {
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* =====Client speaks====== */
+        
+        .carousel-indicators li{
+            height: 10px !important;
+            width:10px !important;
+            border-radius: 100% !important;
+            background-color: #00fe9c !important;
+        }
+        
+        /* =====Contact me====== */
+        #contact form input{
+            box-shadow: none;
+        }
+        #contact form textarea{
+            box-shadow: none;
+        }
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        .social-icons li{
+            margin: 2px 6px;
+            padding: 0;
+            overflow: visible;
+        }
+        #contact div ul li a {
+        display: block;
+        height: 26px;
+        line-height: 26px;
+        width: 26px;
+        font-size: 20px;
+        text-align: center;
+        color: #4d555a;
+        text-decoration: none;
+        @include transition(all 0.2s ease);
+
+        }
+        
+         /* =====footer part=== */
+         footer a{
+            text-decoration: underline;
+        }
+        footer a:hover{
+            text-decoration: none;
+        }
+
+        #btn-back-to-top {
+            position: fixed;
+            bottom: 10px;
+            right: 15px;
+            display: none;
+            background-color: rgba(0,0,0,.2);
+            color: #fff;
+        
+        }
+        #btn-back-to-top:hover{
+            background-color: #00fe9c;
+            color: #000;
+        }
+
+        .form-border .form-control {
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid rgba(0,0,0,.12);
+            border-radius: 0;
+            color: #000;
+            padding-left: 0!important;
+        }
+        /* =====global cls====== */
+        .text-md-start {
+            text-align: left !important;
+        }
+
+        .text-prmry {
+            color: #00fe9c;
+        }
+
+        .bg-prmry {
+            background-color: #00fe9c;
+        }
+
+        .border-prmry {
+            border-color:#00fe9c !important;
+            
+        }
+        
+
+        .bg-scndry {
+            background-color: #939597;
+        }
+
+        #hire {
+            background-image:
+                    linear-gradient(to bottom, rgb(48 49 54 / 52%),rgb(33 37 41)), url(https://harnishdesign.net/demo/react/callum/demo/images/intro-bg-2.jpg);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .bg-dark {
+            background-color: #111418 !important;
+            --bs-bg-opacity: 1;
+        }
+
+        .opacity-8 {
+            opacity: .8;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#main-nav" data-offset="100">
+    <header class="">
+        <nav class="navbar navbar-dark bg-dark fixed-top" id="main-nav">
+            <div class="container">
+                <a class="navbar-brand" href="#">RAFIQUL</a>
+                <div class="text-3 ml-auto mr-2 text-white">
+                    <span class="text-4 mr-2"><i class="fas fa-phone"></i></span>(060) 444 434 444
+                </div>
+                <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                    data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="navbar-collapse collapse" id="navbarsExample01" style="height: fit-content;">
+                    <div class="d-flex flex-column h-100 align-items-center justify-content-center">
+                        <ul class="navbar-nav text-center">
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#home">Home<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#about">About Me</a>
+                            </li>
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#services">What I Do</a>
+                            </li>
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#resume">Resume</a>
+                            </li>
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#faq">FAQ </a>
+                            </li>
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#clientSpeak">Client Speak</a>
+                            </li>
+                            <li class="nav-item" data-toggle="collapse" data-target="#navbarsExample01">
+                                <a class="nav-link text-white text-5 fw-500" href="#contact">Contact Me</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 text-center text-lg-left align-self-center order-1 order-lg-0 wow fadeIn"
+                        style="visibility: visible;">
+                        <h1 class="fw-300 text-12 text-uppercase">hi, i a'm a freelancer</h1>
+                        <h1 class="text-21 fw-600 text-uppercase "><span class="typ-wrtr"></span></h1>
+                        <p class="h5">based in Los Angels, USA</p>
+                        <a class="btn btn-dark rounded-0 px-5 mt-3" href="#portfolio" style="cursor: pointer;">View My Works</a>
+                        <a class="btn btn-link text-dark mt-3" href="#contact" style="cursor: pointer;">Contact Me<span
+                                class="text-4 ml-2"><i class="far fa-arrow-alt-circle-down"></i></span></a>
+                    </div>
+                    <div class="col-lg-5 text-center align-self-center mb-4 mb-lg-0 order-0 order-lg-1 wow zoomIn" style="visibility: visible;" wow fadeInUp>
+                        <div class="bg-light rounded-circle d-inline-block p-3 shadow-lg animate__animated animate__zoomIn"
+                            style="visibility: visible;">
+                            <img class="img-fluid rounded-circle d-block" src="images/web-developer1.jpg"
+                                title="I'm Rafiqul" alt="I'm Islam">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="scroll-down-arrow text-dark smooth-scroll" style="cursor: pointer;">
+                <span class="animated"><i class="fas fa-arrow-down"></i></span>
+            </a>
+        </section>
+        <section id="about">
+            <div class="container">
+                <p class="h6 text-center mb-2 wow fadeInUp"><span class="bg-prmry px-2">About Me</span></p>
+                <p class="h1 text-center mb-5 fw-600 wow fadeInUp">Know Me More</p>
+                <div class="row">
+                    <div class="col-md-8 text-center text-md-left wow fadeInUp">
+                        <h2 class="fw-400 mb-3">Hi, I'm <span
+                                class="fw-700 border-3">Rafiqul Islam</span></h2>
+                        <p class="text-5" style="line-height:1.8; margin-bottom:1rem; margin-top:0;">I'm a designer
+                            &amp; developer with a
+                            passion for web design. I enjoy developing simple, clean and slick websites that provide
+                            real value to the end user.
+                            Thousands of clients have procured exceptional results while working with me. Delivering
+                            work within time and budget
+                            which meets client’s requirements is our moto.</p>
+                    </div>
+                    <div class="col-md-4 mt-4 mt-md-0 wow fadeInUp">
+                        <div class="featured-box style-4">
+                            <div class="featured-box-icon text-25 fw-500 bg-prmry rounded-circle">
+                                <span class="wow heartBeat" data-wow-delay="1.3s"
+                                    style="visibility: visible; animation-delay: 1.3s;">22</span>
+                            </div>
+                            <h3 class="text-7 wow rubberBand" data-wow-delay="2s"
+                                style="visibility: visible; animation-delay: 2s;">Years of <span
+                                    class="fw-700">Experiance</span></h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row gy-3 mt-4">
+                    <div class="col-6 col-md-3 wow fadeInUp" style="visibility: visible;">
+                        <p class="text-muted fw-500 mb-0">Name:</p>
+                        <p class="text-4 text-dark fw-600 mb-0">Rafiqul Islam</p>
+                    </div>
+                    <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.2s"
+                        style="visibility: visible; animation-delay: 0.2s;">
+                        <p class="text-muted fw-500 mb-0">Email:</p>
+                        <p class="fw-600 mb-0"><a class="link-dark"
+                                href="mailto:rafiqulislamemon05@gmail.com">rafiqulislamemon05@gmail.com</a></p>
+                    </div>
+                    <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.3s"
+                        style="visibility: visible; animation-delay: 0.3s;">
+                        <p class="text-muted fw-500 mb-0">Date of birth:</p>
+                        <p class="text-4 text-dark fw-600 mb-0">28 May, 2000</p>
+                    </div>
+                    <div class="col-6 col-md-3 wow fadeInUp" data-wow-delay="0.4s"
+                        style="visibility: visible; animation-delay: 0.4s;">
+                        <p class="text-muted fw-500 mb-0">From:</p>
+                        <p class="text-4 text-dark fw-600 mb-0">Los Angeles, USA.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="services" class="bg-light">
+            <div class="container">
+                <p class="h6 text-center mb-2 wow fadeInUp"><span class="bg-prmry px-2">What I Do?</span></p>
+                <p class="h1 text-center mb-5 fw-600 wow fadeInUp">How I can help your next project</p>
+                <div class="row gy-5 mt-5">
+                    <div class="col-sm-6 col-md-4 wow fadeInUp">
+                        <div class="featured-box px-md-4 text-center mb-4">
+                            <div class="featured-box-icon text-prmry display-4"><i class="fas fa-palette"></i></div>
+                            <h4 class="fw-600 mb-3">Graphic Design</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.8;">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
+                                text. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 wow fadeInUp">
+                        <div class="featured-box px-md-4 text-center mb-4">
+                            <div class="featured-box-icon text-prmry display-4"><i class="fas fa-desktop"></i></div>
+                            <h4 class="fw-600 mb-3">Web Design</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.8;">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
+                                text. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 wow fadeInUp">
+                        <div class="featured-box px-md-4 text-center mb-4">
+                            <div class="featured-box-icon text-prmry display-4"><i class="fas fa-pencil-ruler"></i>
+                            </div>
+                            <h4 class="fw-600 mb-3">UI/UX Design</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.8;">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
+                                text. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 wow fadeInUp">
+                        <div class="featured-box px-md-4 text-center mb-4">
+                            <div class="featured-box-icon text-prmry display-4"><i class="fas fa-paint-brush"></i></div>
+                            <h4 class="fw-600 mb-3">App Design & Develop</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.8;">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
+                                text. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 wow fadeInUp">
+                        <div class="featured-box px-md-4 text-center mb-4">
+                            <div class="featured-box-icon text-prmry display-4"><i class="fas fa-chart-area"></i></div>
+                            <h4 class="fw-600 mb-3">Business Analysis</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.8;">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
+                                text. </p>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4 wow fadeInUp">
+                        <div class="featured-box px-md-4 text-center mb-4">
+                            <div class="featured-box-icon text-prmry display-4"><i class="fas fa-bullhorn"></i></div>
+                            <h4 class="fw-600 mb-3">SEO Marketing</h4>
+                            <p class="text-muted mb-0" style="line-height: 1.8;">Lorem Ipsum is simply dummy text of the
+                                printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy
+                                text. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="resume">
+            <div class="container">
+                <p class="h6 text-center mb-2 wow fadeInUp"><span class="bg-prmry px-2">Resume</span></p>
+                <p class="h1 text-center mb-5 fw-600 wow fadeInUp">A summary of My Resume</p>
+                <div class="row mt-5 g-5">
+                    <div class="col-md-6 wow fadeInUp">
+                        <h3 class="mb-4 mt-5 pb-2 fw-600">My Education</h3>
+                        <div id="" class="border-2 pl-3">
+                            <div>
+                                <h4>Master in Computer Engineering</h4>
+                                <p class="mb-2">Harvard University / 2015 - 2017</p>
+                                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the dummy text.</p>
+                                <hr class="my-4">
+                            </div>
+                            <div>
+                                <h4>Bachelor in Computer Engineering</h4>
+                                <p class="mb-2">University of California / 2014 - 2015</p>
+                                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the dummy text.</p>
+                                <hr class="my-4">
+                            </div>
+                            <div>
+                                <h4>International Science</h4>
+                                <p class="mb-2">Harvard University / 2013 - 2014</p>
+                                <p class="text-muted">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                    industry. Lorem Ipsum has been the dummy text.</p>
+                                <hr class="my-4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
+                        <h3 class="mb-4 mt-5 pb-2 fw-600">My Experience</h3>
+                        <div id="" class="border-2 pl-3">
+                            <div>
+                                <h4>Sr. Font End Developer</h4>
+                                <p class="mb-2">Apple Inc / 2020 - current</p>
+                                <p class="text-muted">Lisque persius interesset his et, in quot quidam persequeris vim,
+                                    ad mea essent possim iriure.</p>
+                                <hr class="my-4">
+                            </div>
+                            <div>
+                                <h4>Jr. Font End Developer</h4>
+                                <p class="mb-2">Dribbble Inc / 2018 - 2020</p>
+                                <p class="text-muted">Lisque persius interesset his et, in quot quidam persequeris vim,
+                                    ad mea essent possim iriure.</p>
+                                <hr class="my-4">
+                            </div>
+                            <div>
+                                <h4>HTML Developer</h4>
+                                <p class="mb-2">Adobe Inc / 2017 - 2018</p>
+                                <p class="text-muted">Lisque persius interesset his et, in quot quidam persequeris vim,
+                                    ad mea essent possim iriure.</p>
+                                <hr class="my-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="fw-600 mb-4 pb-2 mt-5 wow fadeInUp" style="visibility: visible;">My Skills</h3>
+                <div class="row gx-5">
+                    <div class="col-md-6 wow fadeInUp">
+                        <p class="fw-500 text-start mb-2">Web Design <span class="float-right">65%</span></p>
+                        <div class="progress progress-sm mb-4">
+                            <div class="progress-bar bg-prmry" role="progressbar" aria-valuenow="65" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 65%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp">
+                        <p class="fw-500 text-start mb-2">HTML/CSS <span class="float-right">95%</span></p>
+                        <div class="progress progress-sm mb-4">
+                            <div class="progress-bar bg-prmry" role="progressbar" aria-valuenow="95" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 95%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp">
+                        <p class="fw-500 text-start mb-2">JavaScript <span class="float-right">80%</span></p>
+                        <div class="progress progress-sm mb-4">
+                            <div class="progress-bar bg-prmry" role="progressbar" aria-valuenow="80" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 80%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp">
+                        <p class="fw-500 text-start mb-2">React JS <span class="float-right">70%</span></p>
+                        <div class="progress progress-sm mb-4">
+                            <div class="progress-bar bg-prmry" role="progressbar" aria-valuenow="70" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 70%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp">
+                        <p class="fw-500 text-start mb-2">Angular Js <span class="float-right">60%</span></p>
+                        <div class="progress progress-sm mb-4">
+                            <div class="progress-bar bg-prmry" role="progressbar" aria-valuenow="60" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 60%;"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 wow fadeInUp">
+                        <p class="fw-500 text-start mb-2">Bootstrap <span class="float-right">99%</span></p>
+                        <div class="progress progress-sm mb-4">
+                            <div class="progress-bar bg-prmry" role="progressbar" aria-valuenow="99" aria-valuemin="0"
+                                aria-valuemax="100" style="width: 99%;"></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text-center mt-5 wow fadeInUp" style="visibility: visible;">
+                    <a class="btn btn-outline-dark shadow-none rounded-0" href="images/MY RESUME.docx.pdf" download=""
+                        style="border-width: 2px; font-weight: 500; padding: 0.8rem 2.6rem; transition: all .5s ease;">Download
+                        CV</a>
+                </p>
+            </div>
+
+        </section>
+        <section id="portfolio" class="bg-light">
+            <div class="container">
+                <p class="h6 text-center mb-2 wow fadeInUp"><span class="bg-prmry px-2">Portfolio</span></p>
+                <p class="h1 text-center mb-5 fw-600 wow fadeInUp">Some of my most recent projects</p>
+                <ul class="nav fw-600 justify-content-start justify-content-md-center border-bottom-0 mb-5 wow fadeInUp"
+                    style="visibility: visible;">
+                    <li class="nav-list m-1 p-2 text-muted active" data-filter="all">All</li>
+                    <li class="nav-list m-1 p-2 text-muted " data-filter="details">Details</li>
+                    <li class="nav-list m-1 p-2 text-muted " data-filter="mockups">Mockups</li>
+                    <li class="nav-list m-1 p-2 text-muted " data-filter="youtube">Youtube Videos</li>
+                    <li class="nav-list m-1 p-2 text-muted " data-filter="vimeo">Vimeo Videos</li>
+                </ul>
+                <!-- portfolio part -->
+                <div class="portfolio">
+                    <div class="form-row justify-content-center">
+                        <div class="col-lg-4 col-sm-6 mb-2 wow fadeInUp">
+                            <div class="portfolio-img details">
+                                <img class="portfolio-img img-fluid d-block"
+                                    src="https://harnishdesign.net/demo/react/callum/demo/images/projects/project-1.jpg"
+                                    alt="project 1">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details p-2 top-auto">
+                                        <p class="text-prmry text-8"><i class="fas fa-file-alt"></i></p>
+                                        <h5 class="text-white text-5">Detailed Project 1</h5><span
+                                            class="text-light">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 wow fadeInUp">
+                            <div class="portfolio-img mockups">
+                                <img class="portfolio-img img-fluid d-block"
+                                    src="https://harnishdesign.net/demo/react/callum/demo/images/projects/project-2.jpg"
+                                    alt="project 2">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details p-2 top-auto">
+                                        <p class="text-prmry text-8"><i class="fas fa-image"></i></p>
+                                        <h5 class="text-white text-5">Mockup Design 1</h5><span
+                                            class="text-light">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 wow fadeInUp">
+                            <div class="portfolio-img youtube">
+                                <img class="portfolio-img img-fluid d-block"
+                                    src="https://harnishdesign.net/demo/react/callum/demo/images/projects/project-3.jpg"
+                                    alt="project 3">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details p-2 top-auto">
+                                        <p class="text-prmry text-8"><i class="fas fa-video"></i></p>
+                                        <h5 class="text-white text-5">Youtube Video</h5><span
+                                            class="text-light">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 wow fadeInUp">
+                            <div class="portfolio-img vimeo">
+                                <img class="portfolio-img img-fluid d-block"
+                                    src="https://harnishdesign.net/demo/react/callum/demo/images/projects/project-4.jpg"
+                                    alt="project 4">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details p-2 top-auto">
+                                        <p class="text-prmry text-8"><i class="fas fa-video"></i></p>
+                                        <h5 class="text-white text-5">Vimeo Video</h5><span
+                                            class="text-light">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 wow fadeInUp">
+                            <div class="portfolio-img details">
+                                <img class="portfolio-img img-fluid d-block"
+                                    src="https://harnishdesign.net/demo/react/callum/demo/images/projects/project-5.jpg"
+                                    alt="project 5">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details p-2 top-auto">
+                                        <p class="text-prmry text-8"><i class="fas fa-file-alt"></i></p>
+                                        <h5 class="text-white text-5">Detailed Project 2</h5><span
+                                            class="text-light">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-sm-6 mb-2 wow fadeInUp">
+                            <div class="portfolio-img mockups">
+                                <img class="portfolio-img img-fluid d-block"
+                                    src="https://harnishdesign.net/demo/react/callum/demo/images/projects/project-6.jpg"
+                                    alt="project 6">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details p-2 top-auto">
+                                        <p class="text-prmry text-8"><i class="fas fa-image"></i></p>
+                                        <h5 class="text-white text-5">Mockup Designs 2</h5><span
+                                            class="text-light">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <section id="hire" class="">
+            <div class="container text-center py-5 wow fadeInUp" style="visibility: visible;">
+                <h1 class="text-white mb-5 fw-600">Interested in working with me?</h1>
+                <a class="btn bg-prmry rounded-0 px-4 py-2 animate__animated animate__rubberBand animate__repeat-2" data-wow-delay="1s"
+                    style="visibility: visible; animation-delay: 1s;" href="#contact">Hire Me!</a>
+            </div>
+        </section>
+        <section id="faq" class="bg-light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 order-md-0 order-1 my-4 wow fadeInUp">
+                        <p class="h6 mb-2 text-center text-md-left"><span class="bg-prmry px-2">FAQ</span></p>
+                        <p class="h1 mb-5 fw-600 text-center text-md-left">Have any questions?</p>
+                        <div class="accordion" id="ace">
+                            <div>
+                                <button class="text-muted border-0 btn-light btn-block text-left btn-outline-light"
+                                    type="button" data-toggle="collapse" data-target="#ans1"><span class="h5"><i class="fa-sharp fa-solid fa-arrow-right"></i> What is
+                                        Callum?</span></button>
+                                <div class="collapse" id="ans1" data-parent="#ace">
+                                    <p class="mt-3">Lisque persius interesset his et, in quot quidam persequeris vim, ad
+                                        mea essent
+                                        possim iriure. Mutat
+                                        tacimates id sit. Ridens mediocritatem ius an, eu nec magna imperdiet Lorem
+                                        ipsum dolor, sit amet consectetur adipisicing elit. Quasi, odio. </p>
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div>
+                                <button class="text-muted border-0 btn-light btn-block text-left btn-outline-light"
+                                    type="button" data-toggle="collapse" data-target="#ans2"><span class="h5"><i class="fa-sharp fa-solid fa-arrow-right"></i> How Can I
+                                        Help You?</span></button>
+                                <div class="collapse" id="ans2" data-parent="#ace">
+                                    <p class="mt-3">Lisque persius interesset his et, in quot quidam persequeris vim, ad
+                                        mea essent
+                                        possim iriure. Mutat
+                                        tacimates id sit. Ridens mediocritatem ius an, eu nec magna imperdiet</p>
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div>
+                                <button class="text-muted border-0 btn-light btn-block text-left btn-outline-light"
+                                    type="button" data-toggle="collapse" data-target="#ans3"><span class="h5"><i class="fa-sharp fa-solid fa-arrow-right"></i> Simple
+                                        Process For Workflow?</span></button>
+                                <div class="collapse" id="ans3" data-parent="#ace">
+                                    <p class="mt-3">Lisque persius interesset his et, in quot quidam persequeris vim, ad
+                                        mea essent
+                                        possim iriure. Mutat
+                                        tacimates id sit. Ridens mediocritatem ius an, eu nec magna imperdiet</p>
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div>
+                                <button class="text-muted border-0 btn-light btn-block text-left btn-outline-light"
+                                    type="button" data-toggle="collapse" data-target="#ans4"><span
+                                        class="h5 text-capitalize"><i class="fa-sharp fa-solid fa-arrow-right"></i> is callum a multi-purpose templet?</span></button>
+                                <div class="collapse" id="ans4" data-parent="#ace">
+                                    <p class="mt-3">Lisque persius interesset his et, in quot quidam persequeris vim, ad
+                                        mea essent
+                                        possim iriure. Mutat
+                                        tacimates id sit. Ridens mediocritatem ius an, eu nec magna imperdiet Lorem
+                                        ipsum dolor sit, amet consectetur adipisicing elit. Natus mollitia quas
+                                        delectus! Animi repudiandae voluptatibus atque nisi ex temporibus ad at, ab
+                                        similique? Similique, quam.</p>
+                                </div>
+                            </div>
+                            <hr class="my-3">
+                            <div>
+                                <button class="text-muted border-0 btn-light btn-block text-left btn-outline-light"
+                                    type="button" data-toggle="collapse" data-target="#ans5"><span class="h5"><i class="fa-sharp fa-solid fa-arrow-right"></i> Why
+                                        responsive one page templet?</span></button>
+                                <div class="collapse" id="ans5" data-parent="#ace">
+                                    <p class="mt-3">Lisque persius interesset his et, in quot quidam persequeris vim, ad
+                                        mea essent
+                                        possim iriure. Mutat
+                                        tacimates id sit. Ridens mediocritatem ius an, eu nec magna imperdiet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 justify-content-center d-flex align-self-center order-md-1 order-0 my-4 animate__animated animate__fadeIn animate__slower">
+                        <img class="img-fluid" src="https://harnishdesign.net/demo/react/callum/demo/images/faq.png"
+                            title="FAQ" alt="faq">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="clientSpeak" class="bg-scndry">
+            <div class="container">
+                <p class="h6 text-center mb-2 wow fadeIn"><span class="bg-prmry px-2">Client Speak</span></p>
+                <p class="h1 text-white text-center mb-5 fw-600 wow fadeIn">What Some of my Clients Say</p>
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active mb-5">
+                            <div>
+                                <div class="item text-center px-5" tabindex="-1"
+                                    style="width: 100%; display: inline-block;">
+                                    <span class="text-9 text-primary"><i class="fa fa-quote-start"></i></span>
+                                    <p class="text-5 text-white">“Easy to use, reasonably priced simply dummy text of
+                                        the printing and typesetting industry. Quidam lisque persius interesset his et,
+                                        in quot quidam possim iriure. simply dummy text of the printing and typesetting
+                                        industry.”</p><img class="img-fluid d-inline-block w-auto rounded-circle shadow"
+                                        src="https://harnishdesign.net/demo/react/callum/demo/images/testimonial/client-sm-1.jpg"
+                                        alt="Jay Shah"> <strong class="d-block text-3 fw-600 text-white">Jay
+                                        Shah</strong><span class="text-light">Founder at Icomatic Pvt Ltd</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item mb-5">
+                            <div>
+                                <div class="item text-center px-5" tabindex="-1"
+                                    style="width: 100%; display: inline-block;">
+                                    <span class="text-9 text-primary"><i class="fa fa-quote-start"></i></span>
+                                    <p class="text-5 text-white"> “I am happy Working with printing and typesetting
+                                        industry. Quidam lisque
+                                        persius interesset his et, in quot quidam persequeris essent possim iriure.
+                                        simply dummy text of the
+                                        printing and typesetting industry.”</p><img
+                                        class="img-fluid d-inline-block w-auto rounded-circle shadow"
+                                        src="https://harnishdesign.net/demo/react/callum/demo/images/testimonial/client-sm-2.jpg"
+                                        alt="Patrick Cary"> <strong class="d-block text-3 fw-600 text-white">Patrick
+                                        Cary</strong> <span class="text-light">Freelancer
+                                        from USA</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item mb-5">
+                            <div>
+                                <div class="item text-center px-5" tabindex="-1"
+                                    style="width: 100%; display: inline-block;">
+                                    <span class="text-9 text-primary"><i class="fa fa-quote-start"></i></span>
+                                    <p class="text-5 text-white">“Only trying it out since a few days. But up to now
+                                        excellent. Seems to
+                                        work flawlessly .Quidam lisque persius interesset his et,
+                                        in quot quidam possim iriure. priced simply dummy text of the printing and typesetting
+                                        industry.”</p><img class="img-fluid d-inline-block w-auto rounded-circle shadow"
+                                        src="https://harnishdesign.net/demo/react/callum/demo/images/testimonial/client-sm-3.jpg"
+                                        alt="Dennis Jacques"><strong class="d-block text-3 fw-600 text-white">Dennis
+                                        Jacques</strong><span class="text-light">Noon
+                                        Inc</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item mb-5">
+                            <div>
+                                <div class="item text-center px-5" tabindex="-1"
+                                    style="width: 100%; display: inline-block;">
+                                    <span class="text-9 text-primary"><i class="fa fa-quote-start"></i></span>
+                                    <p class="text-5 text-white">“I have used them twice now. Good rates, very efficient
+                                        service and priced simply dummy text of the printing and typesetting industry
+                                        quidam interesset his et. simply dummy text of the printing and typesetting
+                                        industry. Excellent.”</p>
+                                    <img class="img-fluid d-inline-block w-auto rounded-circle shadow"
+                                        src="https://harnishdesign.net/demo/react/callum/demo/images/testimonial/client-sm-4.jpg"
+                                        alt="Chris Tom"><strong class="d-block text-3 fw-600 text-white">Chris
+                                        Tom</strong><span class="text-light">User from UK</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                        data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                        data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="bg-prmry">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-5 text-md-left text-center wow fadeInUp">
+                        <h1 class="fw-600 mb-5">Let's get in touch</h1>
+                        <p class="h5 fw-500" style="line-height: 1.8;">I enjoy discussing new projects and design challenges. Please share as much info, as possible so we can get the most out of our first catch-up</p>
+                        <h5 class="fw-600 mt-5">Living In:</h5><p class="text-4 fw-400" style="line-height: 1.8;">30 Shacham street, Los Angeles, USA.</p>
+                        <h5 class="fw-600">Call:</h5>
+                        <p class="text-4 fw-400" style="line-height: 1.8;">(+880) 18896 93061</p>
+
+                        <ul class="justify-content-center justify-content-md-start mt-5 social-icons social-icons-lg">
+                            <li class="social-icons-twitter">
+                                <a href="https://twitter.com/harnishdesign/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-lg fab fa-twitter"></i></a>
+                            </li>
+                            <li class="social-icons-facebook"><a href="http://www.facebook.com/sagirmd.emon/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-lg fab fa-facebook"></i></a>
+                            </li>
+                            <li class="social-icons-instagram"><a href="http://www.instagram.com/hulk_emon/" target="_blank" rel="noopener noreferrer"><i class="fa-lg fab fa-instagram"></i></a>
+                            </li>
+                            <li class="social-icons-github"><a href="http://www.github.com/" target="_blank" rel="noopener noreferrer"><i
+                                        class="fa-lg fab fa-github"></i></a>
+                            </li>
+                            <li class="social-icons-dribbble"><a href="http://www.dribbble.com/harnishdesign/" target="_blank"
+                                    rel="noopener noreferrer"><i class="fa-lg fab fa-dribbble"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 ml-auto mt-md-0 mt-5 wow fadeInUp">
+                        <h1 class="text-md-left text-center fw-600 mb-5">Estimate your Project?</h1>
+                        <form id="contact-form" class="form-border" method="post">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <label class="form-label" for="name">What is Your Name:</label><input id="name" name="user_name" type="text"
+                                        class="form-control mb-4 py-1" required="">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="email">Your Email Address:</label><input id="email" name="user_email"
+                                        type="email" class="form-control mb-4 py-1" required="">
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" for="form-message">How can I Help you?:</label><textarea id="form-message"
+                                        name="message" class="form-control mb-4 py-1" rows="4" required=""></textarea>
+                                </div>
+                                <div class="col-12 text-center text-md-left btn-lg mt-2"><button id="submit-btn" class="btn btn-dark rounded-0 px-5 py-2"
+                                        type="submit">Send <span class="ml-3"><i class="fas fa-arrow-right"></i></span></button></div>
+                                <div class="Toastify"></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark text-white section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 text-center text-lg-start wow fadeInUp" data-wow-duration="3s" style="visibility: visible;">
+                    <p class="mb-2 mb-lg-0" style="line-height: 1.8;">Copyright © 2023 <a class="fw-600" style="color: #00fe9c;" href="/">RAFIQUL</a>. All Rights Reserved.</p>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" style="visibility: visible;">
+                    <p class="mb-0 text-center text-lg-end" style="line-height: 1.8;">Designed by <a class="fw-600" href="https://www.harnishdesign.net/" style="color: #00fe9c;">Rafiqul Design</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="upper">
+            <button type="button" class="btn rounded-circle btn-floating" id="btn-back-to-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.4.js"
+  integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+  crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('.nav-list').click(function(){
+                const value = $(this).attr('data-filter');
+                if (value == 'all'){
+                    $('.portfolio-img').show('1000');
+                }
+                else{
+                    $('.portfolio-img').not('.'+value).hide('1000');
+                    $('.portfolio-img').filter('.'+value).show('1000');
+                    
+                }
+            })
+                // add active class on selected items 
+
+            $('.nav-list').click(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            })
+        })
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+        // typewritter effect
+        var typed = new Typed(".typ-wrtr", {
+            strings: ["mr.rafiqul", "designer", "developer"],
+            typeSpeed:120,
+            backSpeed:80,
+            loop:true
+        })
+
+        //Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            if (
+                document.body.scrollTop > 20 ||
+                document.documentElement.scrollTop > 20
+            ) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- amimate JavaScript -->
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <script src="js/custom.js"></script>
+    <script src="js/jquery-3.6.4.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>
